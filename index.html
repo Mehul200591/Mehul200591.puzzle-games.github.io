@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle Games - Home</title>
+    <title>Xplorea Games & Solutions - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <div class="container">
-        <h1>Puzzle Games</h1>
+        <h1>Xplorea Games & Solutions</h1>
         <nav>
             <a href="#games">Games</a>
             <a href="#about">About</a>
@@ -22,7 +22,10 @@
 <section id="about" class="about-section">
     <div class="container">
         <h2>About Our Company</h2>
-        <p>We are passionate about creating engaging and challenging puzzle games. Our goal is to offer players a fun and brain-stimulating experience.</p>
+        <p><l>At Puzzle Games, we are passionate about delivering innovative and engaging digital experiences. Our mission is to create fun and challenging games that entertain and inspire, while also developing practical and user-friendly applications that simplify everyday tasks.</l>
+        <l>We are committed to providing high-quality products with a focus on creativity, reliability, and user satisfaction. Whether you're enjoying our immersive games or using our feature-rich applications, we strive to offer seamless and enjoyable experiences.</l>
+        <l>Our team continuously explores new ideas, leveraging the latest technology to enhance gameplay and improve app functionality, ensuring you always have access to the best digital solutions.</l>
+        <l>Thank you for being a part of our journey. We look forward to bringing you even more innovative games and practical apps in the future.</l></p>
     </div>
 </section>
 
@@ -31,51 +34,53 @@
         <h2>Our Games</h2>
 
         <div class="game-card">
-            <h3>Sudoku</h3>
-            <div class="screenshots">
-                <img src="images/sudoku1.jpg" alt="Sudoku Screenshot 1">
-                <img src="images/sudoku2.jpg" alt="Sudoku Screenshot 2">
-                <img src="images/sudoku3.jpg" alt="Sudoku Screenshot 3">
-            </div>
-            <a href="https://play.google.com/store/apps/details?id=com.yourcompany.sudoku" target="_blank" class="btn">Play Sudoku</a>
-        </div>
+            <h3>Puzzle Games</h3>
 
-        <div class="game-card">
-            <h3>Mine Maze</h3>
             <div class="screenshots">
-                <img src="images/mine1.jpg" alt="Mine Screenshot 1">
-                <img src="images/mine2.jpg" alt="Mine Screenshot 2">
-                <img src="images/mine3.jpg" alt="Mine Screenshot 3">
+                <img src="images/ss_1.png" alt="Screenshot 1" onclick="openLightbox(this)">
+                <img src="images/ss_2.png" alt="Screenshot 2" onclick="openLightbox(this)">
+                <img src="images/ss_3.png" alt="Screenshot 3" onclick="openLightbox(this)">
+                <img src="images/ss_4.png" alt="Screenshot 4" onclick="openLightbox(this)">
+                <img src="images/ss_5.png" alt="Screenshot 5" onclick="openLightbox(this)">
+                <img src="images/ss_6.png" alt="Screenshot 6" onclick="openLightbox(this)">
+                <img src="images/ss_7.png" alt="Screenshot 7" onclick="openLightbox(this)">
+                <img src="images/ss_8.png" alt="Screenshot 8" onclick="openLightbox(this)">
+                <img src="images/ss_9.png" alt="Screenshot 9" onclick="openLightbox(this)">
+                <img src="images/ss_10.png" alt="Screenshot 10" onclick="openLightbox(this)">
             </div>
-            <a href="https://play.google.com/store/apps/details?id=com.yourcompany.minemaze" target="_blank" class="btn">Play Mine Maze</a>
-        </div>
 
-        <div class="game-card">
-            <h3>Marble Mania</h3>
-            <div class="screenshots">
-                <img src="images/marble1.jpg" alt="Marble Screenshot 1">
-                <img src="images/marble2.jpg" alt="Marble Screenshot 2">
-                <img src="images/marble3.jpg" alt="Marble Screenshot 3">
-            </div>
-            <a href="https://play.google.com/store/apps/details?id=com.yourcompany.marblemania" target="_blank" class="btn">Play Marble Mania</a>
+            <a href="https://play.google.com/store/apps/details?id=com.xplorea.memorygame" target="_blank" class="btn">Play Sudoku</a>
         </div>
-
-        <div class="game-card">
-            <h3>2048</h3>
-            <div class="screenshots">
-                <img src="images/2048-1.jpg" alt="2048 Screenshot 1">
-                <img src="images/2048-2.jpg" alt="2048 Screenshot 2">
-                <img src="images/2048-3.jpg" alt="2048 Screenshot 3">
-            </div>
-            <a href="https://play.google.com/store/apps/details?id=com.yourcompany.2048" target="_blank" class="btn">Play 2048</a>
-        </div>
-
     </div>
 </section>
 
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Enlarged Screenshot">
+</div>
+
+<script>
+    // Open Lightbox
+    function openLightbox(img) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+    }
+
+    // Close Lightbox
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none';
+    }
+</script>
+
+
 <footer id="footer">
     <div class="container">
-        <p>&copy; 2025 Puzzle Games. All Rights Reserved.</p>
+        <p>&copy; 2025 Xplorea Games & Solutions. All Rights Reserved.</p>
         <a href="privacy-policy.html">Privacy Policy</a> |
         <a href="terms-conditions.html">Terms & Conditions</a>
     </div>
